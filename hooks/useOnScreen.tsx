@@ -15,7 +15,7 @@ function useOnScreen(ref: any, rootMargin = '0px') {
           }
         )
 
-        const currentElement = ref?.current;
+        const currentElement = ref?.current?.lastElementChild;
 
         if (currentElement) {
           observer.observe(currentElement);
