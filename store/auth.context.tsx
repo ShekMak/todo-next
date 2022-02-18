@@ -1,15 +1,17 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { auth } from '../firebase/authentification';
-import { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged, User } from 'firebase/auth';
+
+const initialUser : any = null;
 
 const AuthContext = createContext({
-  user: null,
+  user: initialUser,
   loading: true
 })
 
 export function AuthContextProvider({children}: any) {
 
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -21,7 +23,7 @@ export function AuthContextProvider({children}: any) {
     });
 
     return unsubscribe;
-  }, [user]);
+  }, []);
 
   return (
     <AuthContext.Provider value={{user, loading}}>
