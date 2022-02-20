@@ -1,17 +1,13 @@
 import { NextPage } from "next";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import AuthCheck from "../../../components/AuthCheck";
 import SingleTodo from "../../../components/SingleTodo";
 
 const DetailTodo: NextPage = () => {
-
-    const {todoId} = useRouter().query;
-
-    useEffect(() => {
-        console.log(todoId)
-    }, [todoId])
-
-    return <SingleTodo />
+    return (
+        <AuthCheck>
+            <SingleTodo />
+        </AuthCheck>
+    )
 }
 
 export default DetailTodo;
