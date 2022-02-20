@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useContext, useRef } from 'react';
+import React, { FormEvent, useContext, useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { addTask } from '../firebase/task.firestore';
 import Task from '../models/Task';
@@ -13,7 +13,7 @@ function NewTodo() {
   let dueOnRef = useRef(null);
   const minDate = new Date().getFullYear() + '-' + (`0${new Date().getMonth() + 1}`.slice(-2)) + '-' + (`0${(new Date().getDate())}`.slice(-2));
 
-  function newTask(event: Event) {
+  function newTask(event: FormEvent) {
     event.preventDefault()
 
     const task : Task = {
@@ -29,10 +29,7 @@ function NewTodo() {
       uidUser: user.uid,
     }
 
-    console.log(task);
-
     if(task.title.length > 5 && task.description.length > 5) {
-      console.log('Here');
         addTask(task).then(
           () => {
             toast.success('Task Added', {
