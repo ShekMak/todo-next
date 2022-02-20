@@ -8,10 +8,10 @@ The application is a guide that gathers a set of tips to allow those who want th
 <p align="center">
   <img src="/public/screenshot1.png" width="32%" style="margin: 50px 0px 50px 0px"/>
   <img src="/public/screenshot2.png" width="32%" style="margin: 50px 0px 50px 0px"/>
-  <img src="/preview/screenshot3.png" width="32%" style="margin: 50px 0px 50px 0px"/>
+  <img src="/public/screenshot3.png" width="32%" style="margin: 50px 0px 50px 0px"/>
   <img src="/public/screenshot4.png" width="32%" style="margin: 50px 0px 50px 0px"/>
   <img src="/public/screenshot5.png" width="32%" style="margin: 50px 0px 50px 0px"/>
-  <img src="/preview/screenshot6.png" width="32%" style="margin: 50px 0px 50px 0px"/>
+  <img src="/public/screenshot6.png" width="32%" style="margin: 50px 0px 50px 0px"/>
 </p>
 
 ## Online Version
