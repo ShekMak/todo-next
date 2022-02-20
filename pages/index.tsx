@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
+import AuthCheck from '../components/AuthCheck';
 import Login from '../components/Login';
-import NoAuthCheck from '../components/NoAuthCheck';
 
 const Home: NextPage = () => {
 
   return (
-      <NoAuthCheck>
+      <AuthCheck>
         <Login />
-      </NoAuthCheck>
+      </AuthCheck>
   )
 }
 
