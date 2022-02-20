@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
 function useOnScreen(ref: any, rootMargin = '0px') {
-    const [isVisible, setIsVisible] = useState<boolean | string>(false);
+    const [isVisible, setIsVisible] = useState<boolean | string | null>(false);
 
     useEffect(() => {
-      if ('IntersectionObserver' in window) {
+      if ('IntersectionObserver' in window && ref.current) {
         const observer = new IntersectionObserver(
           ([entry]) => {
             setIsVisible(entry.isIntersecting);
@@ -24,12 +24,16 @@ function useOnScreen(ref: any, rootMargin = '0px') {
         return () => {
           observer.unobserve(currentElement);
         };
+      }else if (!ref.current) {
+        // Ref is Null
+        setIsVisible(null)
       }else {
         setIsVisible("Navigator doesn't support IntersectionObserver")
       }
-    }, [])
+    });
+    
 
-    return isVisible;
+    return [isVisible];
 }
 
 export default useOnScreen
