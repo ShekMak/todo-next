@@ -3,14 +3,13 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { getTask, UpdateTask } from '../firebase/task.firestore';
-import Task from '../models/Task';
 import Loading from './Loading';
 
 function SingleTodo() {
 
   const router = useRouter();
   const {todoId} = router.query;
-  const [todo, setTodo] = useState<Task | null>(null)
+  const [todo, setTodo] = useState<any>(null)
 
   useEffect(() => {
     if(todoId && typeof todoId === 'string'){
@@ -58,7 +57,7 @@ function SingleTodo() {
       <div className='flex flex-col mt-10'>
         <h3 className='text-2xl font-semibold mb-4 max-w-full truncate'>{todo.title}</h3>
         <p className='truncate max-w-full'>{todo.description}</p>
-        <p className='mt-4'>Due At: {new Date(todo.dueAt.seconds).toISOString()}</p>
+        <p className='mt-4'>Due At: {new Date(todo.dueAt).toISOString()}</p>
         {!todo.complete && <button onClick={MarkTaskDone} className='mt-6 py-3 bg-black text-white rounded-md'>Done</button>}
       </div>
       <Toaster

@@ -29,7 +29,7 @@ function NewTodo() {
       uidUser: user.uid,
     }
 
-    if(task.title.length > 5 && task.description.length > 5) {
+    if(task.title.length >= 5 && task.description.length >= 5) {
         addTask(task).then(
           () => {
             toast.success('Task Added', {

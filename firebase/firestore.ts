@@ -10,12 +10,13 @@ export const getCollectionWithLimit = async <T>(collectionName: string, orderByE
         doc => {
             const id = doc.id;
             const data = doc.data();
+            console.log(data);
             datas.push({ 
                 id,
                 ...data,
-                createdAt: data?.createdAt || 0,
-                dueAt: data?.dueAt || 0,
-                updatedAt: data?.updatedAt || 0
+                createdAt: new Date(data?.createdAt?.seconds * 1000) || null,
+                dueAt: new Date(data.dueAt?.seconds * 1000) || null,
+                updatedAt: new Date(data?.updatedAt?.seconds * 1000) || null
             })
         }
     );
@@ -34,9 +35,9 @@ export const getCollectionAt = async <T>(collectionName: string, orderByElement:
             datas.push({ 
                 id,
                 ...data,
-                createdAt: data?.createdAt || 0,
-                dueAt: data?.dueAt || 0,
-                updatedAt: data?.updatedAt || 0
+                createdAt: new Date(data?.createdAt?.seconds * 1000) || null,
+                dueAt: new Date(data.dueAt?.seconds * 1000) || null,
+                updatedAt: new Date(data?.updatedAt?.seconds * 1000) || null
             })
         }
     );
@@ -48,11 +49,14 @@ export const getDocument = async <T>(collectionName: string) => {
     return document.then(
         doc => {
             const id = doc.id;
-            const data = doc.data() as T;
+            const data = doc.data();
 
             return { 
                 id,
-                ...data
+                ...data,
+                createdAt: new Date(data?.createdAt?.seconds * 1000) || null,
+                dueAt: new Date(data?.dueAt?.seconds * 1000) || null,
+                updatedAt: new Date(data?.updatedAt?.seconds * 1000) || null
             };
         }
     )

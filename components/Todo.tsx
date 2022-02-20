@@ -13,9 +13,9 @@ function Todo({todo, currentDate}: IProps) {
   const [overdue, setOverdue] = useState('');
 
   useEffect(() => {
-    const todoDate = new Date(todo.dueAt?.seconds * 1000);
+    const todoDate = todo.dueAt.getTime();
     
-    if(currentDate.getTime() >= todoDate.getTime()){
+    if(currentDate.getTime() >= todoDate){
       setOverdue(' border-red-500');
     }
   }, []);
