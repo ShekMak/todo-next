@@ -88,7 +88,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # License
 
 ```
-Designed and developed by 2020 ericampire (Eric Ampire)
+Designed and developed by 2022 Shekinah TSHIOKUFILA
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
