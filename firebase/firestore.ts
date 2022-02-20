@@ -10,7 +10,6 @@ export const getCollectionWithLimit = async <T>(collectionName: string, orderByE
         doc => {
             const id = doc.id;
             const data = doc.data();
-            console.log(data);
             datas.push({ 
                 id,
                 ...data,

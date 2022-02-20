@@ -15,7 +15,10 @@ function SingleTodo() {
     if(todoId && typeof todoId === 'string'){
       getTask(todoId).then(
         (task) => setTodo(task) 
-      ).catch(console.log)
+      ).catch(error => 
+        toast(error.message, {
+          icon: '⛔️'
+        }))
     }
   }, [])
 
