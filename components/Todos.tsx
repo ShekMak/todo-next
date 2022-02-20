@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { Children, useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { logOut } from '../firebase/authentification';
 import { getMoreTasks, getTasks } from '../firebase/task.firestore';
@@ -152,10 +152,8 @@ function Todos() {
         {(todos.length > 0 && todosLoading === false) && 
           <div ref={ref} className="px-6 pt-3">
             {
-              Children.toArray(
-                todos.map(
-                  todo => <Todo todo={todo} currentDate={currentDate}/>
-                )
+              todos.map(
+                todo => <Todo key={todo.id} todo={todo} currentDate={currentDate}/>
               )
             }
             <Link href="/todo/new-task">
