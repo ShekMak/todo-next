@@ -1,24 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Todo Next Firebase App</h1><br>
+<p align="center">  
+Todo Next Firebase App is a web application built using Nextjs and Firebase, based on modern web technology stacks.
+The application is a guide that gathers a set of tips to allow those who want the means to learn and master the development of a web application with Nextjs and Firebase.
+</p>
+<br>
 
+<p align="center">
+  <img src="/public/screenshot1.png" width="32%" style="margin: 50px 0px 50px 0px"/>
+  <img src="/public/screenshot2.png" width="32%" style="margin: 50px 0px 50px 0px"/>
+  <img src="/preview/screenshot3.png" width="32%" style="margin: 50px 0px 50px 0px"/>
+  <img src="/public/screenshot4.png" width="32%" style="margin: 50px 0px 50px 0px"/>
+  <img src="/public/screenshot5.png" width="32%" style="margin: 50px 0px 50px 0px"/>
+  <img src="/preview/screenshot6.png" width="32%" style="margin: 50px 0px 50px 0px"/>
+</p>
+
+## Online Version
+Go to the [link of the project](https://todo-next-firebase-lottie.vercel.app/) to see the sample app.
+
+## Tech stack & Open-source libraries
+
+- Nodejs
+    - ```node```
+    - ```yarn```
+- TypeScript
+    - ```Typescript```
+- Nextjs    
+    - ```Next```
+    - ```React```
+    - ```React Dom```
+
+- Backend As A Service
+    - ```Firebase```
+
+- Lottie Files
+    - ```@lottiefiles/react-lottie-player```
+    - ```@types/react-lottie```
+    - ```react-lottie```
+
+- Style Sheet
+    - ```Tailwindcss```
+
+- Icons
+    - ```bootstrap-icons```
+
+- Toast Notification
+    - ```react-hot-toast```
+
+- Reactive Library
+    - ```rxjs```
+
+## Install the app
+
+```shell
+git clone https://github.com/ShekMak/todo-next
+```
 ## Getting Started
 
-First, run the development server:
+First, install dependecies
+
+```shell
+yarn
+```
+
+run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
+## Learn More About Next Js
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -32,3 +84,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# License
+
+```
+Designed and developed by 2020 ericampire (Eric Ampire)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
